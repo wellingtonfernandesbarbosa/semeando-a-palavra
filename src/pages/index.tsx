@@ -3,15 +3,14 @@ import { getMensagens } from "../services/gistService";
 import { Post } from "@/types/Post";
 import Meta from "@/components/Meta";
 import "./index.css";
+import { useMensagens } from "@/hooks/useMensagens";
 
 type HomeProps = {
   mensagens: Post[];
 };
 
 export default function Home({ mensagens }: HomeProps) {
-  // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-  // @ts-ignore
-  const listMensagens: Post[] = JSON.parse(mensagens[0].conteudo);
+  const listMensagens: Post[] = useMensagens(mensagens);
   return (
     <div className="page">
       <Meta />

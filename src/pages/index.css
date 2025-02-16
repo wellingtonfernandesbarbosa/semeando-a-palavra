@@ -16,6 +16,24 @@
   font-family: var(--font-geist-sans);
 }
 
+.container h1 {
+  text-align: center;
+}
+
+.content {
+  max-width: 768px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+img {
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
 @media (prefers-color-scheme: dark) {
   .page {
     --gray-rgb: 255, 255, 255;

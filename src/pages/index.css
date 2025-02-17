@@ -26,7 +26,11 @@
   margin: 0 auto;
 }
 
-img {
+.card h2 {
+  text-align: center;
+}
+
+.card img {
   width: 100%;
   height: auto;
   max-width: 100%;

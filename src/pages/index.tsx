@@ -17,13 +17,16 @@ export default function Home({ mensagens }: HomeProps) {
       <Meta />
       <h1>Semeando a Palavra</h1>
       <div className="content">
-        {listMensagens.map((mensagem, index) => (
-          <div key={index} className="card">
-            <h2>{mensagem.title}</h2>
-            <p>{mensagem.description}</p>
-            <Image src={mensagem.image} alt={mensagem.imageAlt} width={0} height={0} layout="responsive" />
-          </div>
-        ))}
+        {listMensagens
+          .map((mensagem, index) => (
+            <div key={index} className="card">
+              <h2>{mensagem.title}</h2>
+              <p>{mensagem.author}</p>
+              <p>{mensagem.description}</p>
+              <Image src={mensagem.image} alt={mensagem.imageAlt} width={0} height={0} layout="responsive" />
+            </div>
+          ))
+          .reverse()}
       </div>
     </div>
   );

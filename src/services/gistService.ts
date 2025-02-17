@@ -10,5 +10,7 @@ export async function getMensagens() {
     conteudo: arquivos[key].content,
   }));
 
-  return mensagens;
+  const conteudo = mensagens[0].conteudo;
+
+  return JSON.parse(conteudo);
 }

@@ -3,7 +3,6 @@ import { getMensagens } from "../services/gistService";
 import { Post } from "@/types/Post";
 import Meta from "@/components/Meta";
 import "./index.css";
-import { useMensagens } from "@/hooks/useMensagens";
 import Image from "next/image";
 
 type HomeProps = {
@@ -11,13 +10,12 @@ type HomeProps = {
 };
 
 export default function Home({ mensagens }: HomeProps) {
-  const listMensagens: Post[] = useMensagens(mensagens);
   return (
     <div className="container">
       <Meta />
       <h1>Semeando a Palavra</h1>
       <div className="content">
-        {listMensagens
+        {mensagens
           .map((mensagem, index) => (
             <div key={index} className="card">
               <h2>{mensagem.title}</h2>

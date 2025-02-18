@@ -1,11 +1,11 @@
 import "./index.css";
 
 import Image from "next/image";
-import { GetStaticProps } from "next";
-
 import { Post } from "@/types/Post";
 import Meta from "@/components/Meta";
+import { GetStaticProps } from "next";
 import { getMensagens } from "../services/gistService";
+import Header from "@/components/Header";
 
 type HomeProps = {
   mensagens: Post[];
@@ -24,9 +24,7 @@ export default function Home({ mensagens }: HomeProps) {
   return (
     <div className="container">
       <Meta />
-      <header>
-        <h1>Semeando a Palavra</h1>
-      </header>
+      <Header />
       <div className="content">
         {mensagens
           .map((mensagem, index) => (

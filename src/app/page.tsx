@@ -4,6 +4,8 @@ import { getMensagens } from "@/services/gistService";
 import { Post } from "@/types/Post";
 import Header from "@/components/Header";
 import { generateMetadata } from "@/components/Meta";
+import Link from "next/link";
+import sanitizeString from "@/utils/sanitizeString";
 
 export const metadata = generateMetadata({
   title: "Semeando a Palavra",
@@ -22,7 +24,9 @@ export default async function Home() {
           .reverse()
           .map((mensagem, index) => (
             <div key={index} className={styles.post}>
-              <h2 className={styles.title}>{mensagem.title}</h2>
+              <Link href={`/posts/${mensagem.id}/${sanitizeString(mensagem.title)}`} passHref>
+                <h2 className={styles.title}>{mensagem.title}</h2>
+              </Link>
               <p className={styles.author}>{mensagem.author}</p>
               <p className={styles.description}>{mensagem.description}</p>
               <Image src={mensagem.image} alt={mensagem.imageAlt} width={500} height={300} style={{ objectFit: "cover" }} />

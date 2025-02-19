@@ -1,0 +1,52 @@
+.container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 16px 8px;
+}
+
+.header h2 {
+  text-align: center;
+}
+
+.info {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.image img {
+  max-width: 100%;
+  width: 100%;
+  object-fit: cover;
+  height: auto;
+  border-radius: 8px;
+}
+
+.content div {
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.content div blockquote {
+  border-left: 2px solid blue;
+}
+
+.content div blockquote p {
+  margin-left: 1rem;
+}
+
+.content div ul {
+  padding-left: 18px;
+}
+
+@media screen and (min-width: 435px) {
+  .container {
+    padding: 16px;
+  }
+}

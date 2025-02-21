@@ -1,14 +1,12 @@
-import styles from "./BlogPost.module.css";
-
-import Head from "next/head";
-import Image from "next/image";
-import { Post } from "@/types/Post";
 import Header from "@/components/Header";
-import { useUpdateUrl } from "@/hooks/useUpdateUrl";
-import { generateMetadata } from "@/components/Meta";
-import { GetStaticPaths, GetStaticProps } from "next";
 import MarkdownToText from "@/components/MarkdownToText";
 import { getAllPosts, getPostById } from "@/services/postsService";
+import { Post } from "@/types/Post";
+import { GetStaticPaths, GetStaticProps } from "next";
+import Image from "next/image";
+import Meta from "@/components/Meta";
+import { useUpdateUrl } from "@/hooks/useUpdateUrl";
+import styles from "./BlogPost.module.css";
 
 // 1. Indica que os parâmetros são estritamente estáticos
 export const dynamicParams = false;
@@ -43,36 +41,16 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
 
 // 5. Componente que mostra apenas o parâmetro estático
 export default function BlogPost({ post }: { post: Post }) {
-  useUpdateUrl(post?.title || "");
+  // Use o hook useUpdateUrl para atualizar a URL com base no título do post
+  useUpdateUrl(post?.title);
 
   if (!post) {
     return <div>Carregando...</div>;
   }
 
-  const metadata = generateMetadata({
-    title: post.title,
-    description: post.description,
-    image: post.image,
-    url: `https://semeandoapalavra.vercel.app/posts/${post.id}`,
-  });
-
   return (
     <div className={styles.container}>
-      <Head>
-        <title>{metadata.title}</title>
-        <meta name="description" content={metadata.description} />
-        <meta name="keywords" content={metadata.keywords} />
-        <meta property="og:title" content={metadata.openGraph.title} />
-        <meta property="og:description" content={metadata.openGraph.description} />
-        <meta property="og:image" content={metadata.openGraph.images[0].url} />
-        <meta property="og:url" content={metadata.openGraph.url} />
-        <meta property="og:type" content={metadata.openGraph.type} />
-        <meta name="twitter:card" content={metadata.twitter.card} />
-        <meta name="twitter:title" content={metadata.twitter.title} />
-        <meta name="twitter:description" content={metadata.twitter.description} />
-        <meta name="twitter:image" content={metadata.twitter.images[0]} />
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
+      <Meta title={post.title} description={post.description} image={post.image} url={`https://semeandoapalavra.vercel.app/posts/${post.id}`} />
       <Header />
       <main className={styles.main}>
         <div className={styles.header}>

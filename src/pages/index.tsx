@@ -53,14 +53,7 @@ export default function Home() {
                   <p className={styles.date}>{mensagem.date}</p>
                 </div>
                 <p className={styles.description}>{mensagem.description}</p>
-                <Image
-                  src={mensagem.image}
-                  alt={mensagem.imageAlt}
-                  width={500}
-                  height={300}
-                  style={{ objectFit: "cover" }}
-                  priority={index === 0} // Adiciona prioridade à primeira imagem
-                />
+                <Image src={mensagem.image} alt={mensagem.imageAlt} width={500} height={300} style={{ objectFit: "cover" }} priority={index === 0} />
               </div>
             ))}
         </div>

@@ -6,13 +6,7 @@ interface MetaProps {
   url?: string;
 }
 
-export function generateMetadata({
-  title = "Semeando a Palavra",
-  description = "Semeando a Palavra de Deus a todos",
-  keywords = "pregação, evangelho, bíblia, fé, cristianismo",
-  image = "/default-thumbnail.jpg",
-  url = "https://semeandoapalavra.vercel.app",
-}: MetaProps) {
+export function generateMetadata({ title = "Semeando a Palavra", description = "Semeando a Palavra de Deus a todos", keywords = "pregação, evangelho, bíblia, fé, cristianismo", image = "", url = "https://semeandoapalavra.vercel.app" }: MetaProps) {
   return {
     title,
     description,

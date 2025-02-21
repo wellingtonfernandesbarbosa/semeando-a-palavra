@@ -16,7 +16,9 @@ export default function Home() {
   return (
     <>
       <Head>
+        <title>Semeando a Palavra</title>
         <meta title="Semeando a Palavra" />
+        <meta property="og:description" content="Semeando a Palavra de Deus a todos" />
         <meta name="description" content="Semeando a Palavra de Deus a todos" />
         <meta name="keywords" content="pregação, evangelho, bíblia, fé, cristianismo" />
       </Head>

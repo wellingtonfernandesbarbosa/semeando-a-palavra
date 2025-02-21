@@ -35,14 +35,24 @@
 
 .content div blockquote {
   border-left: 2px solid blue;
+  margin-left: 0.5rem;
+}
+
+.content div h3 {
+  margin-top: 1rem;
+  text-transform: uppercase;
 }
 
 .content div blockquote p {
-  margin-left: 1rem;
+  margin-left: 0.5rem;
 }
 
 .content div ul {
   padding-left: 18px;
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
 }
 
 @media screen and (min-width: 435px) {

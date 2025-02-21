@@ -27,7 +27,7 @@
   background-color: #ededed;
   padding: 8px;
   width: 100%;
-  max-width: 415px;
+  max-width: 400px;
 }
 
 .post h2 {
@@ -67,6 +67,11 @@
 }
 
 @media (min-width: 768px) {
+  .container {
+    padding: 16px 0;
+    max-width: 100%;
+  }
+
   .post {
     padding: 16px;
   }

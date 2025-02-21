@@ -30,12 +30,14 @@ export default function Home() {
             .reverse()
             .map((mensagem, index) => (
               <div key={index} className={styles.post}>
-                <Link href={`/posts/${mensagem.id}?${sanitizeString(mensagem.title)}`}>
-                  <h2 className={styles.title}>{mensagem.title}</h2>
-                </Link>
-                <div className={styles.info}>
-                  <p className={styles.author}>{mensagem.author}</p>
-                  <p className={styles.date}>{mensagem.date}</p>
+                <div className={styles.header}>
+                  <Link href={`/posts/${mensagem.id}?${sanitizeString(mensagem.title)}`}>
+                    <h2 className={styles.title}>{mensagem.title}</h2>
+                  </Link>
+                  <div className={styles.info}>
+                    <p className={styles.author}>{mensagem.author}</p>
+                    <p className={styles.date}>{mensagem.date}</p>
+                  </div>
                 </div>
                 <p className={styles.description}>{mensagem.description}</p>
                 <Image

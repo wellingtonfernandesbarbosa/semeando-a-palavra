@@ -4,6 +4,8 @@ import { getAllPosts, getPostById } from "@/services/postsService";
 import { Post } from "@/types/Post";
 import { GetStaticPaths, GetStaticProps } from "next";
 import Image from "next/image";
+import Head from "next/head";
+import { generateMetadata } from "@/components/Meta";
 import styles from "./BlogPost.module.css";
 
 // 1. Indica que os parâmetros são estritamente estáticos
@@ -43,8 +45,30 @@ export default function BlogPost({ post }: { post: Post }) {
     return <div>Carregando...</div>;
   }
 
+  const metadata = generateMetadata({
+    title: post.title,
+    description: post.description,
+    image: post.image,
+    url: `https://semeandoapalavra.vercel.app/posts/${post.id}`,
+  });
+
   return (
     <div className={styles.container}>
+      <Head>
+        <title>{metadata.title}</title>
+        <meta name="description" content={metadata.description} />
+        <meta name="keywords" content={metadata.keywords} />
+        <meta property="og:title" content={metadata.openGraph.title} />
+        <meta property="og:description" content={metadata.openGraph.description} />
+        <meta property="og:image" content={metadata.openGraph.images[0].url} />
+        <meta property="og:url" content={metadata.openGraph.url} />
+        <meta property="og:type" content={metadata.openGraph.type} />
+        <meta name="twitter:card" content={metadata.twitter.card} />
+        <meta name="twitter:title" content={metadata.twitter.title} />
+        <meta name="twitter:description" content={metadata.twitter.description} />
+        <meta name="twitter:image" content={metadata.twitter.images[0]} />
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
       <Header />
       <main className={styles.main}>
         <div className={styles.header}>

@@ -15,7 +15,7 @@ export default function Home() {
 
   return (
     <>
-      <Meta title="Semeando a Palavra" description="Semeando a Palavra de Deus a todos" keywords="pregação, evangelho, bíblia, fé, cristianismo" />
+      <Meta title="Semeando a Palavra" description="Semeando a Palavra de Deus a todos" keywords="pregação, evangelho, bíblia, fé, cristianismo" image="/default-thumbnail.jpg" url="https://semeandoapalavra.vercel.app" />
       <Header />
       <main className={styles.container}>
         <div className={styles.posts}>

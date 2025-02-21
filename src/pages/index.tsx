@@ -2,9 +2,9 @@ import Image from "next/image";
 import styles from "@/styles/Home.module.css";
 import { useMensagens } from "@/hooks/useMensagens";
 import Header from "@/components/Header";
-import Meta from "@/components/Meta";
 import Link from "next/link";
 import sanitizeString from "@/utils/sanitizeStrings";
+import Head from "next/head";
 
 export default function Home() {
   const { mensagens, loading } = useMensagens();
@@ -15,7 +15,11 @@ export default function Home() {
 
   return (
     <>
-      <Meta title="Semeando a Palavra" description="Semeando a Palavra de Deus a todos" keywords="pregação, evangelho, bíblia, fé, cristianismo" image="/default-thumbnail.jpg" url="https://semeandoapalavra.vercel.app" />
+      <Head>
+        <meta title="Semeando a Palavra" />
+        <meta name="description" content="Semeando a Palavra de Deus a todos" />
+        <meta name="keywords" content="pregação, evangelho, bíblia, fé, cristianismo" />
+      </Head>
       <Header />
       <main className={styles.container}>
         <div className={styles.posts}>

@@ -17,7 +17,7 @@
   flex-direction: column;
   gap: 16px;
   border-radius: 16px;
-  background-color: #fdfdfd;
+  background-color: #ededed;
   padding: 8px;
   width: 100%;
   max-width: 415px;
@@ -32,8 +32,9 @@
   display: flex;
   justify-content: space-around;
   align-items: center;
-  gap: 1rem;
+  gap: 0.3rem;
   flex-wrap: wrap;
+  font-size: 14px;
 }
 
 .post img {
@@ -44,6 +45,12 @@
   margin: auto 0 0 0;
   height: auto;
   aspect-ratio: 16 / 9;
+}
+
+@media (min-width: 400px) {
+  .post {
+    padding: 16px;
+  }
 }
 
 @media (min-width: 600px) {

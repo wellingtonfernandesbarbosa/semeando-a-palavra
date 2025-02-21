@@ -60,7 +60,7 @@ export default function BlogPost({ post }: { post: Post }) {
             <p className={styles.date}>{post.date}</p>
           </div>
         </div>
-        <div className={styles.image}>{post.image && <Image src={post.image} alt={post.title} width={1500} height={1000} />}</div>
+        <div className={styles.image}>{post.image && <Image src={post.image} alt={post.title} title={post.title} width={1500} height={1000} />}</div>
         <div className={styles.content}>
           <MarkdownToText>{post.text}</MarkdownToText>
         </div>

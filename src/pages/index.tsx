@@ -41,6 +41,7 @@ export default function Home() {
                 <Image
                   src={mensagem.image}
                   alt={mensagem.imageAlt}
+                  title={mensagem.imageTitle}
                   width={500}
                   height={300}
                   style={{ objectFit: "cover" }}

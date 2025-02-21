@@ -1,12 +1,14 @@
+import styles from "./BlogPost.module.css";
+
+import Head from "next/head";
+import Image from "next/image";
+import { Post } from "@/types/Post";
 import Header from "@/components/Header";
+import { useUpdateUrl } from "@/hooks/useUpdateUrl";
+import { generateMetadata } from "@/components/Meta";
+import { GetStaticPaths, GetStaticProps } from "next";
 import MarkdownToText from "@/components/MarkdownToText";
 import { getAllPosts, getPostById } from "@/services/postsService";
-import { Post } from "@/types/Post";
-import { GetStaticPaths, GetStaticProps } from "next";
-import Image from "next/image";
-import Head from "next/head";
-import { generateMetadata } from "@/components/Meta";
-import styles from "./BlogPost.module.css";
 
 // 1. Indica que os parâmetros são estritamente estáticos
 export const dynamicParams = false;
@@ -41,6 +43,8 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
 
 // 5. Componente que mostra apenas o parâmetro estático
 export default function BlogPost({ post }: { post: Post }) {
+  useUpdateUrl(post?.title || "");
+
   if (!post) {
     return <div>Carregando...</div>;
   }
@@ -78,7 +82,7 @@ export default function BlogPost({ post }: { post: Post }) {
             <p className={styles.date}>{post.date}</p>
           </div>
         </div>
-        <div className={styles.image}>{post.image && <Image src={post.image} alt={post.title} width={300} height={150} />}</div>
+        <div className={styles.image}>{post.image && <Image src={post.image} alt={post.title} width={1500} height={1000} />}</div>
         <div className={styles.content}>
           <MarkdownToText>{post.text}</MarkdownToText>
         </div>

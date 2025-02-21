@@ -10,7 +10,7 @@ export default function Home() {
   const { mensagens, loading } = useMensagens();
 
   if (loading) {
-    return <p>Carregando...</p>;
+    return <p className={styles.loading}>Carregando...</p>;
   }
 
   return (

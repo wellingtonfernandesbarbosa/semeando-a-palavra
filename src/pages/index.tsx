@@ -4,6 +4,8 @@ import styles from "@/styles/Home.module.css";
 import { useMensagens } from "@/hooks/useMensagens";
 import Header from "@/components/Header";
 import { generateMetadata } from "@/components/Meta";
+import Link from "next/link";
+import sanitizeString from "@/utils/sanitizeStrings";
 
 export default function Home() {
   const { mensagens, loading } = useMensagens();
@@ -43,7 +45,9 @@ export default function Home() {
             .reverse()
             .map((mensagem, index) => (
               <div key={index} className={styles.post}>
-                <h2 className={styles.title}>{mensagem.title}</h2>
+                <Link href={`/posts/${mensagem.id}?${sanitizeString(mensagem.title)}`}>
+                  <h2 className={styles.title}>{mensagem.title}</h2>
+                </Link>
                 <div className={styles.info}>
                   <p className={styles.author}>{mensagem.author}</p>
                   <p className={styles.date}>{mensagem.date}</p>

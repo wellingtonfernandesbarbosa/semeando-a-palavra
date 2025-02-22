@@ -2,4 +2,28 @@
   max-width: 980px;
   margin: 8px auto 16px;
   text-align: center;
+  text-align: center;
+}
+
+.header.normal {
+  font-size: 2rem;
+}
+
+.header.small {
+  font-size: 0.8rem;
+  padding: 10px;
+}
+
+.alignLeft {
+  text-align: left;
+}
+
+.header h1 {
+  color: #0D47A1;
+}
+
+@media (prefers-color-scheme: dark) {
+  .header h1 {
+    color: #64B5F6;
+  }
 }

@@ -1,14 +1,14 @@
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #F9F9F9;
+  --foreground: #333333;
   --font-open-sans: 'Open Sans', Arial, Helvetica, sans-serif;
   --max-width: 980px;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --background: #121212;
+    --foreground: #E0E0E0;
   }
 }
 
@@ -19,7 +19,6 @@ body {
 }
 
 body {
-  padding: 16px 0;
   color: var(--foreground);
   background: var(--background);
   font-family: var(--font-open-sans);

@@ -51,7 +51,7 @@ export default function BlogPost({ post }: { post: Post }) {
   return (
     <div className={styles.container}>
       <Meta title={post.title} description={post.description} image={post.image} url={`https://semeandoapalavra.vercel.app/posts/${post.id}`} />
-      <Header />
+      <Header size="small" />
       <main className={styles.main}>
         <div className={styles.header}>
           <h2>{post.title}</h2>

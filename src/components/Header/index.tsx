@@ -1,9 +1,13 @@
 import styles from "./Header.module.css";
 
-export default function Header() {
+interface HeaderProps {
+  size?: "normal" | "small";
+}
+
+export default function Header({ size = "normal" }: HeaderProps) {
   return (
-    <header className={styles.header}>
-      <h1>Semeando a Palavra</h1>
+    <header className={`${styles.header} ${styles[size]}`}>
+      <h1 className={size === "small" ? styles.alignLeft : ""}>Semeando a Palavra</h1>
     </header>
   );
 }

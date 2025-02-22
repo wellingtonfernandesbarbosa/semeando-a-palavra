@@ -73,6 +73,22 @@
   gap: 0.5rem;
 }
 
+.content a {
+  color: #0D47A1;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.content div a:hover {
+  text-decoration: underline;
+}
+
+@media (prefers-color-scheme: dark) {
+  .content a {
+    color: #90CAF9;
+  }
+}
+
 @media screen and (min-width: 435px) {
   .container {
     padding: 16px;

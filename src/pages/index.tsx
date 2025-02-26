@@ -24,11 +24,17 @@ export default function Home() {
         <title>Semeando a Palavra</title>
         <meta title="Semeando a Palavra" />
         <meta property="og:title" content="Semeando a Palavra" />
-        <meta property="og:description" content="Semeando a Palavra de Deus a todos" />
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://semeandoapalavra.vercel.app" />
-        <meta property="og:image" content="/logo.jpg" />
+        <meta property="og:site_name" content="Semeando a Palavra" />
+        <meta name="twitter:title" property="og:title" itemProp="name" content="Semeando a Palavra" />
         <meta name="description" content="Semeando a Palavra de Deus a todos" />
+        <meta name="twitter:description" property="og:description" itemProp="description" content="Semeando a Palavra de Deus a todos" />
+        <meta property="og:url" content="https://semeandoapalavra.vercel.app" />
+        <meta property="og:image" content="https://semeandoapalavra.vercel.app/logo.jpg" itemProp="image primaryImageOfPage" />
+        <meta name="twitter:image" property="og:image" itemProp="image" content="https://semeandoapalavra.vercel.app/logo.jpg" />
+        <meta property="og:locale" content="pt_BR" />
+        <meta property="og:type" content="website" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta property="og:description" content="Semeando a Palavra de Deus a todos" />
         <meta name="keywords" content="pregação, evangelho, bíblia, fé, cristianismo" />
       </Head>
       <Header />

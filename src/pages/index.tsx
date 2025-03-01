@@ -1,10 +1,12 @@
-import Image from "next/image";
 import styles from "@/styles/Home.module.css";
-import { useMensagens } from "@/hooks/useMensagens";
-import Header from "@/components/Header";
+
 import Link from "next/link";
-import sanitizeString from "@/utils/sanitizeStrings";
 import Head from "next/head";
+import Image from "next/image";
+
+import Header from "@/components/Header";
+import { useMensagens } from "@/hooks/useMensagens";
+import sanitizeString from "@/utils/sanitizeStrings";
 
 export default function Home() {
   const { mensagens, loading } = useMensagens();

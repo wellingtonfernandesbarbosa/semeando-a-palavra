@@ -1,12 +1,14 @@
+import styles from "./BlogPost.module.css";
+
+import Image from "next/image";
+import { GetStaticPaths, GetStaticProps } from "next";
+
+import { Post } from "@/types/Post";
+import Meta from "@/components/Meta";
 import Header from "@/components/Header";
 import MarkdownToText from "@/components/MarkdownToText";
 import { getAllPosts, getPostById } from "@/services/postsService";
-import { Post } from "@/types/Post";
-import { GetStaticPaths, GetStaticProps } from "next";
-import Image from "next/image";
-import Meta from "@/components/Meta";
 import { useUpdateUrl } from "@/hooks/useUpdateUrl";
-import styles from "./BlogPost.module.css";
 
 // 1. Indica que os parâmetros são estritamente estáticos
 export const dynamicParams = false;

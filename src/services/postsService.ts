@@ -1,5 +1,5 @@
-import { getMensagens } from "@/services/gistService";
 import { Post } from "@/types/Post";
+import { getMensagens } from "@/services/gistService";
 
 export async function getAllPosts(): Promise<Post[]> {
   return await getMensagens(); // Já retorna o array tratado

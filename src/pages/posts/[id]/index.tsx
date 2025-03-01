@@ -24,7 +24,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
     params: { id: String(post.id) },
   }));
 
-  return { paths, fallback: false };
+  return { paths, fallback: "blocking" }; // 'blocking' para carregamento assíncrono
 };
 
 // 4. Busca os dados do post com base no parâmetro id

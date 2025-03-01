@@ -29,7 +29,14 @@ export const getStaticPaths: GetStaticPaths = async () => {
 
 // 4. Busca os dados do post com base no parâmetro id
 export const getStaticProps: GetStaticProps = async ({ params }) => {
-  const post = await getPostById(Number(params?.id));
+  const postId = Number(params?.id);
+  const post = await getPostById(postId);
+
+  if (!post || post.id > postId) {
+    return {
+      notFound: true,
+    };
+  }
 
   return {
     props: {

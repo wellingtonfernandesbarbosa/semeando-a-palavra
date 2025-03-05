@@ -31,8 +31,8 @@ export default function Home() {
         <meta name="description" content="Semeando a Palavra de Deus a todos" />
         <meta name="twitter:description" property="og:description" itemProp="description" content="Semeando a Palavra de Deus a todos" />
         <meta property="og:url" content="https://semeandoapalavra.vercel.app" />
-        <meta property="og:image" content="https://i.imgur.com/tiFeWas.jpeg" itemProp="image primaryImageOfPage" />
-        <meta name="twitter:image" property="og:image" itemProp="image" content="https://i.imgur.com/tiFeWas.jpeg" />
+        <meta property="og:image" content="/logo.jpg" itemProp="image primaryImageOfPage" />
+        <meta name="twitter:image" property="og:image" itemProp="image" content="/logo.jpg" />
 
         <link rel="shortcut icon" href="/favicon.ico" />
         <link rel="icon" type="image/svg+xml" href="/favicon.svg" />

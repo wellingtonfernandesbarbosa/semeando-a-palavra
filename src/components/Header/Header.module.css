@@ -17,12 +17,5 @@
 }
 
 .header h1 {
-  color: #0D47A1;
   font-family: var(--font-lora), serif;
-}
-
-@media (prefers-color-scheme: dark) {
-  .header h1 {
-    color: #64B5F6;
-  }
 }

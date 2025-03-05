@@ -11,13 +11,6 @@
 .header h2 {
   text-align: center;
   font-size: 2.2rem;
-  color: #1A237E;
-}
-
-@media (prefers-color-scheme: dark) {
-  .header h2 {
-    color: #90CAF9;
-  }
 }
 
 .info {
@@ -52,7 +45,7 @@
 }
 
 .content div blockquote {
-  border-left: 2px solid blue;
+  border-left: 2px solid var(--deep-blue);
   margin-left: 0.5rem;
 }
 
@@ -73,20 +66,8 @@
   gap: 0.5rem;
 }
 
-.content a {
-  color: #0D47A1;
-  text-decoration: none;
-  font-weight: 500;
-}
-
 .content div a:hover {
   text-decoration: underline;
-}
-
-@media (prefers-color-scheme: dark) {
-  .content a {
-    color: #90CAF9;
-  }
 }
 
 @media screen and (min-width: 340px) {

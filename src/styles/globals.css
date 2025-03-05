@@ -1,26 +1,92 @@
 :root {
-  --background: #F9F9F9;
-  --foreground: #333333;
   --font-open-sans: 'Open Sans', Arial, Helvetica, sans-serif;
   --max-width: 980px;
+
+  --white: #FFFFFF;
+  --black: #000000;
+
+  --paper-beige: #f0ebe3;
+  --soft-black: #191919;
+  --ligth-black: #2f2f2f;
+  --bluish-graphite: #2c3e50;
+  --bright-gray: #efefef;
+  --medium-graphite: #34495e;
+  --matte-silver: #bdc3c7;
+  --celestial-blue: #4b89dc;
+  --deep-blue: #0d47a1;
+  --light-blue: #64B5F6;
+
+  --app-title-light: var(--deep-blue);
+  --app-title-dark: var(--celestial-blue);
+  --title-light: var(--celestial-blue);
+  --title-dark: var(--light-blue);
+  --text-light: var(--medium-graphite);
+  --text-dark: var(--matte-silver);
+  --link-light: var(--celestial-blue);
+  --link-dark: var(--celestial-blue);
+  --background-light: var(--bright-gray);
+  --background-dark: var(--soft-black);
+  --card-light: var(--white);
+  --card-dark: var(--ligth-black);
 }
 
 @media (prefers-color-scheme: dark) {
-  :root {
-    --background: #121212;
-    --foreground: #E0E0E0;
+  html {
+    color-scheme: dark;
+  }
+
+  body {
+    background-color: var(--background-dark);
+  }
+
+  p {
+    color: var(--text-dark);
+  }
+
+  a {
+    color: var(--link-dark);
+  }
+
+  h1 {
+    color: var(--app-title-dark);
+  }
+
+  h2 {
+    color: var(--title-dark);
+  }
+
+  h3 {
+    color: var(--light-blue);
   }
 }
 
-html,
-body {
-  max-width: 100vw;
-  overflow-x: hidden;
+@media (prefers-color-scheme: light) {
+  body {
+    background: var(--background-light);
+  }
+
+  p {
+    color: var(--text-light)
+  }
+
+  a {
+    color: var(--link-light);
+  }
+
+  h1 {
+    color: var(--app-title-light);
+  }
+
+  h2 {
+    color: var(--title-light);
+  }
+
+  h3 {
+    color: var(--deep-blue);
+  }
 }
 
 body {
-  color: var(--foreground);
-  background: var(--background);
   font-family: var(--font-open-sans);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -32,13 +98,13 @@ body {
   margin: 0;
 }
 
-a {
-  color: inherit;
-  text-decoration: none;
+html,
+body {
+  max-width: 100vw;
+  overflow-x: hidden;
 }
 
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
+a {
+  font-weight: 500;
+  text-decoration: none;
 }

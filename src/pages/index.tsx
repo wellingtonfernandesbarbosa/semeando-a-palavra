@@ -29,12 +29,12 @@ export default function Home() {
         <meta property="og:site_name" content="Semeando a Palavra" />
         <meta name="twitter:title" property="og:title" itemProp="name" content="Semeando a Palavra" />
         <meta name="description" content="Semeando a Palavra de Deus a todos" />
+        <link rel="icon" href="/favicon.ico" />
         <meta name="twitter:description" property="og:description" itemProp="description" content="Semeando a Palavra de Deus a todos" />
         <meta property="og:url" content="https://semeandoapalavra.vercel.app" />
         <meta property="og:image" content="/logo.jpg" itemProp="image primaryImageOfPage" />
         <meta name="twitter:image" property="og:image" itemProp="image" content="/logo.jpg" />
 
-        <link rel="shortcut icon" href="/favicon.ico" />
         <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
         <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />

@@ -1,4 +1,5 @@
 import "@/styles/globals.css";
+
 import type { AppProps } from "next/app";
 import { Open_Sans, Lora } from "next/font/google";
 import { Analytics } from "@vercel/analytics/react";

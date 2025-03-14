@@ -7,6 +7,10 @@
 }
 
 .container {
+  padding: 16px 0;
+}
+
+.mainCcontainer {
   max-width: var(--max-width);
   margin: 0 auto;
   padding: 16px;
@@ -87,7 +91,7 @@
 }
 
 @media (min-width: 900px) {
-  .container {
+  .mainCcontainer {
     max-width: 100%;
   }
 

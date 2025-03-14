@@ -48,7 +48,7 @@ export default function Home() {
   }
 
   return (
-    <>
+    <div className={styles.container}>
       <Head>
         <title>Semeando a Palavra</title>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -78,7 +78,7 @@ export default function Home() {
         <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
       </Head>
       <Header />
-      <main className={styles.container}>
+      <main className={styles.mainCcontainer}>
         <div className={styles.posts}>
           {mensagens
             .slice()
@@ -108,6 +108,6 @@ export default function Home() {
             ))}
         </div>
       </main>
-    </>
+    </div>
   );
 }

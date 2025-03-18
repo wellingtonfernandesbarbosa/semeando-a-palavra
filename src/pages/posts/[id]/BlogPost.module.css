@@ -44,6 +44,10 @@
   gap: 1rem;
 }
 
+.content p {
+  font-size: 18px;
+}
+
 .content div blockquote {
   border-left: 2px solid var(--deep-blue);
   margin-left: 0.5rem;

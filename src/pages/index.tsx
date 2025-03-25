@@ -9,7 +9,7 @@ import { useMensagens } from "@/hooks/useMensagens";
 import sanitizeString from "@/utils/sanitizeStrings";
 
 export default function Home() {
-  const { mensagens, loading } = useMensagens();
+  const { mensagens } = useMensagens();
 
   return (
     <div className={styles.container}>

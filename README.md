@@ -66,5 +66,5 @@ Confira a [documentação de deploy](https://nextjs.org/docs/app/building-your-a
 
 ---
 
-**Semeando a Palavra** • Compartilhando mensagens de edificação.
+**Semeando a Palavra** • Semeando a Palavra de Deus a todos.
 
